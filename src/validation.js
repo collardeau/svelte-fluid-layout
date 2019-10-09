@@ -1,6 +1,5 @@
 const warn = (msg, val) => console.warn(`[svelte-fluid-layout]:`, msg, val);
 
-const validAs = ["div", "header", "section"];
 const validBp = ["sm", "md", "lg", "xl"];
 
 export default function validate({ breakpoint }) {
