@@ -4,7 +4,7 @@ Create a responsive and customizable layout for your app.
 
 # Demo
 
-[Code Sandbox](https://codesandbox.io/s/svelte-fluid-layout-demo-5ew7j?fontsize=14&module=%2FApp.svelte)
+[Example](https://5ew7j.csb.app/) | [Code Sandbox](https://codesandbox.io/s/svelte-fluid-layout-demo-5ew7j?fontsize=14&module=%2FApp.svelte)
 
 # Install
 
