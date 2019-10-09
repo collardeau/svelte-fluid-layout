@@ -1,5 +1,5 @@
 {
-  "name": "svelte-fluid-header",
+  "name": "svelte-fluid-layout",
   "svelte": "src/index.svelte",
   "module": "index.mjs",
   "main": "index.js",
