@@ -38,7 +38,7 @@ You can use `.svelte-fluid-layout-large .my-element` and `.svelte-fluid-layout-s
 
 Give a width to the `main` slot on large screens (see style section above), as by default it only takes up the size of its inner content (which will be collapsed at first with no content). `side1` and `side2` share whatever is left over.
 
-The `side1` and `side2` slots are not required, so you don't have to use the holy grail layout.
+The `side1` and `side2` slots are not required, hence you don't have to use the holy grail layout.
 
 # Props
 
