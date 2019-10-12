@@ -23,8 +23,8 @@
     "index.mjs",
     "index.js"
   ],
-  "description": "Responsive and customizable Svelte component",
-  "version": "0.1.0",
+  "description": "Responsive Layout Svelte Component",
+  "version": "0.2.0",
   "dependencies": {},
   "repository": {
     "type": "git",
