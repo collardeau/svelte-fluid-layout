@@ -12,6 +12,8 @@ A component to create a responsive layout for your [Svelte](https://svelte.dev/)
 
 `npm i svelte-fluid-layout`
 
+This package has no dependencies.
+
 # Usage
 
 There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When using all of them, you achieve a (responsive) [holy grail layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)), like the above screenshot.
