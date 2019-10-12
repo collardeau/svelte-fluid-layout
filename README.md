@@ -1,6 +1,8 @@
 # svelte-fluid-layout
 
-A [Svelte](https://svelte.dev/) component to create a responsive layout for your app.
+A component to create a responsive layout for your [Svelte](https://svelte.dev/) app.
+
+![Screen Shot 2019-10-12 at 4 45 06 PM](https://user-images.githubusercontent.com/5746614/66703962-c95b3180-ed0f-11e9-9631-4ae017d2b916.png)
 
 # Demo
 
@@ -12,7 +14,7 @@ A [Svelte](https://svelte.dev/) component to create a responsive layout for your
 
 # Usage
 
-There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When using them all, you achieve a (responsive) [holy grail layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)).
+There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When using all of them, you achieve a (responsive) [holy grail layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)), like the above screenshot.
 
 ```html
 <script>
