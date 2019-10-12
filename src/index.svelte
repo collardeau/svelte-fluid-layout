@@ -1,86 +1,103 @@
 <script>
   import validate from "./validation";
   export let breakpoint = "sm";
-  let pre = "fluid-layout--";
+  let pre = "svelte-fluid-layout-";
+
+  const fullHeight = node => {
+    node.children[0].style.minHeight = "100%";
+  };
+
   $: validate({ breakpoint });
 </script>
 
 <style>
-  .fluid-layout--container {
+  .svelte-fluid-layout-small,
+  .svelte-fluid-layout-large {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
-  .fluid-layout--flex {
+
+  .svelte-fluid-layout-large > div {
     display: flex;
   }
-  .fluid-layout--flex-1 {
+
+  div div {
     flex: 1;
   }
 
-  .fluid-layout-large {
+  .svelte-fluid-layout-large > div div:nth-child(2n + 1):empty {
+    flex: 0;
+  }
+
+  .svelte-fluid-layout-large-sm {
+    display: none;
+  }
+  .svelte-fluid-layout-large-md {
+    display: none;
+  }
+  .svelte-fluid-layout-large-lg {
+    display: none;
+  }
+  .svelte-fluid-layout-large-xl {
     display: none;
   }
 
   @media (min-width: 640px) {
-    .fluid-layout--sm {
+    .svelte-fluid-layout-small-sm {
       display: none;
     }
-    .fluid-layout-large {
+    .svelte-fluid-layout-large-sm {
       display: flex;
     }
   }
   @media (min-width: 768px) {
-    .fluid-layout--md {
+    .svelte-fluid-layout-small-md {
       display: none;
     }
-    .fluid-layout-large {
+    .svelte-fluid-layout-large-md {
       display: flex;
     }
   }
 
   @media (min-width: 1024px) {
-    .fluid-layout--lg {
+    .svelte-fluid-layout-small-lg {
       display: none;
     }
-    .fluid-layout-large {
+    .svelte-fluid-layout-large-lg {
       display: flex;
     }
   }
 
   @media (min-width: 1280px) {
-    .fluid-layout--xl {
+    .svelte-fluid-layout-small-xl {
       display: none;
     }
-    .fluid-layout-large {
+    .svelte-fluid-layout-large-xl {
       display: flex;
     }
   }
-
-  .fluid-layout--collapsible:empty {
-    flex: 0;
-  }
 </style>
 
-<div class="fluid-layout-small {pre}{breakpoint} {pre}container">
+<div class="{pre}small {pre}small-{breakpoint}">
   <slot name="header" />
-  <slot name="menu" />
-  <div class="{pre}flex-1">
+  <slot name="side1" />
+  <div>
     <slot name="main" />
   </div>
-  <slot name="aside" />
+  <slot name="side2" />
   <slot name="footer" />
 </div>
 
-<div class="fluid-layout-large {pre}container">
+<div class="{pre}large {pre}large-{breakpoint}">
   <slot name="header" />
-  <div class="{pre}flex-1 {pre}flex">
-    <div class="{pre}flex-1 {pre}collapsible">
-      <slot name="menu" />
+  <div>
+    <div use:fullHeight>
+      <slot name="side1" />
     </div>
     <slot name="main" />
-    <div class="{pre}flex-1 {pre}collapsible">
-      <slot name="aside" />
+    <div use:fullHeight>
+      <slot name="side2" />
     </div>
   </div>
   <slot name="footer" />
