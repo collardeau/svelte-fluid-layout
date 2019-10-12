@@ -12,17 +12,18 @@ Create a responsive and customizable layout for your app.
 
 # Usage
 
+There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When using them all you achieve a (responsive) holy grail layout.
+
 ```html
 <script>
   import Layout from "svelte-fluid-layout";
 </script>
 
-
 <Layout>
-  <header slot="header">Header</header>
-  <section slot="menu">Menu</section>
-  <main slot="main">Main</main>
-  <aside slot="aside">Aside</aside>
+  <header slot="header">My Header</header>
+  <section slot="side1">My Section</section>
+  <main slot="main">My Main</main>
+  <aside slot="side2">My Aside</aside>
   <footer slot="footer">Footer</footer>
 </Layout>
 
@@ -33,18 +34,22 @@ Create a responsive and customizable layout for your app.
 </style>
 ```
 
-It's important to give a width to the `main` slot on large screens (`.fluid-layout-large main` in this case), or else it will just take up the size of its inner content (which will be collapsed at first with no content). `section` and `menu` will take up whatever size is left and split it on the left and right of the `main` slot.
+It's important to give a width to the `main` slot on large screens (see style section above), or else it will just take up the size of its inner content (which will be collapsed at first with no content). `side1` and `side2` share whatever is left over.
+
+The `side1` and `side2` slots are optional in which case you get fewer columns in your layout.
 
 # Props
 
 ### `breakpoint`
 
-The breakpoint at which the layout becomes a single column. Valid values are:
+The breakpoint at which the layout switches from horizontal to vertical. Valid values are:
 
  - `sm` (640px)
  - `md`(768px),
  - `lg`(1024px),
  - `xl`(1200px).
+ 
+ The default value is `sm`;
  
  ```html
  <Layout breakpoint='md'>
