@@ -1,6 +1,6 @@
 # svelte-fluid-layout
 
-Create a responsive and customizable layout for your app.
+A [Svelte](https://svelte.dev/) component to create a responsive layout for your app.
 
 # Demo
 
@@ -12,7 +12,7 @@ Create a responsive and customizable layout for your app.
 
 # Usage
 
-There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When using them all you achieve a (responsive) holy grail layout.
+There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When using them all, you achieve a (responsive) [holy grail layout](https://en.wikipedia.org/wiki/Holy_grail_(web_design)).
 
 ```html
 <script>
@@ -28,15 +28,17 @@ There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When us
 </Layout>
 
 <style>
-  :global(.fluid-layout-large main) {
+  :global(.svelte-fluid-layout-large main) {
     width: 66%;
   }
 </style>
 ```
 
-It's important to give a width to the `main` slot on large screens (see style section above), or else it will just take up the size of its inner content (which will be collapsed at first with no content). `side1` and `side2` share whatever is left over.
+You can use `.svelte-fluid-layout-large .my-element` and `.svelte-fluid-layout-small .my-element` to target your slotted elements at either display size, small or large (horizontal or vertical).
 
-The `side1` and `side2` slots are optional in which case you get fewer columns in your layout.
+Give a width to the `main` slot on large screens (see style section above), as by default it only takes up the size of its inner content (which will be collapsed at first with no content). `side1` and `side2` share whatever is left over.
+
+The `side1` and `side2` slots are not required, so you don't have to use the holy grail layout.
 
 # Props
 
