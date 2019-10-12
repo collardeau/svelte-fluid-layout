@@ -34,9 +34,9 @@ There are five slots (`header`, `main`, `footer`, `side1`, and `side2`). When us
 </style>
 ```
 
-You can use `.svelte-fluid-layout-large .my-element` and `.svelte-fluid-layout-small .my-element` to target your slotted elements at either display size, small or large (horizontal or vertical).
+You can use `.svelte-fluid-layout-large .my-element` and `.svelte-fluid-layout-small .my-element` to target your slotted elements at either display size, small or large.
 
-Give a width to the `main` slot on large screens (see style section above), as by default it only takes up the size of its inner content (which will be collapsed at first with no content). `side1` and `side2` share whatever is left over.
+Give a width to the `main` slot on large screens (see style section above), as by default `main` only takes up the size of its inner content (which will be collapsed at first with no content). `side1` and `side2` share whatever is left over.
 
 The `side1` and `side2` slots are not required, hence you don't have to use the holy grail layout.
 
@@ -46,12 +46,12 @@ The `side1` and `side2` slots are not required, hence you don't have to use the 
 
 The breakpoint at which the layout switches from horizontal to vertical. Valid values are:
 
- - `sm` (640px)
- - `md`(768px),
- - `lg`(1024px),
- - `xl`(1200px).
+ - `"sm"` (640px)
+ - `"md"`(768px),
+ - `"lg"`(1024px),
+ - `"xl"`(1200px).
  
- The default value is `sm`;
+ The default value is `"sm"`;
  
  ```html
  <Layout breakpoint='md'>
